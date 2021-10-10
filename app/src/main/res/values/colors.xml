@@ -11,16 +11,41 @@
 
 
     <color name="purple1">#986D8E</color>
+    <color name="purple2">#9D84B7</color>
+    <color name="purple3">#4B3869</color>
+    <color name="purple4">#664E88</color>
+    <color name="purple5">#6F69AC</color>
     <color name="teal1">#87A8A4</color>
     <color name="teal2">#FF018786</color>
+    <color name="teal3">#63B4B8</color>
     <color name="pink1">#FDEFEF</color>
     <color name="pink2">#FCD8D4</color>
     <color name="pink3">#FFBCBC</color>
     <color name="pink4">#F9DFDC</color>
+    <color name="pink5">#EB92BE</color>
+    <color name="pink6">#FD6F96</color>
     <color name="beige1">#D9CAB3</color>
     <color name="beige2">#CDBBA7</color>
+    <color name="beige3">#AAA492</color>
+    <color name="beige4">#9A9483</color>
     <color name="green1">#B5CDA3</color>
     <color name="green2">#C9E4C5</color>
+    <color name="green3">#B1E693</color>
+    <color name="green4">#6ECB63</color>
+    <color name="green5">#A9E4D7</color>
+    <color name="blue1">#091353</color>
+    <color name="blue2">#3D2C8D</color>
+    <color name="gray1">#D5D5D5</color>
+    <color name="gray2">#6D8299</color>
+    <color name="orange1">#FF5C58</color>
+    <color name="peach1">#FE8F8F</color>
+    <color name="peach2">#FF7878</color>
+    <color name="yellow1">#FFB319</color>
+    <color name="yellow2">#FFEBA1</color>
+    <color name="yellow4">#FFB344</color>
+    <color name="yellow3">#FFE194</color>
+    <color name="yellow5">#FCFFA6</color>
+
 
 
 

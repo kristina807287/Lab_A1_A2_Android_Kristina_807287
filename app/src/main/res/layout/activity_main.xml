@@ -7,48 +7,48 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_productInfo"
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
-        android:backgroundTint="@color/pink4"
+        android:backgroundTint="@color/yellow4"
         app:tabGravity="fill"
-
+        app:tabMode="fixed"
 
         app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
         app:tabTextColor="@color/purple1"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="16dp">
+        tools:layout_editor_absoluteY="16dp"/>
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PRODUCTS" />
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PROVIDER" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_layout"/>
 
-    </com.google.android.material.tabs.TabLayout>
 
 
     <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        app:defaultQueryHint="search product or description" />
+        app:defaultQueryHint="search by product description" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/peach2"
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        android:backgroundTint="@color/pink1" />
-
+      />
 
 
 </RelativeLayout>

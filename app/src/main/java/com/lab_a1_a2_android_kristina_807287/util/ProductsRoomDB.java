@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.lab_a1_a2_android_kristina_807287.data.ProductsDao;
 import com.lab_a1_a2_android_kristina_807287.model.Products;
@@ -17,7 +18,6 @@ import java.util.concurrent.Executors;
 public abstract class ProductsRoomDB extends RoomDatabase {
 
     private static final String DB_NAME = "room_products_db";
-
 
     public abstract ProductsDao productsDao();
 
@@ -34,7 +34,7 @@ public abstract class ProductsRoomDB extends RoomDatabase {
                 if (INSTANCE == null) {
 
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), ProductsRoomDB.class, DB_NAME)
-                            //.addCallback(getRoomDatabaseCallBack())
+                            .addCallback(getRoomDatabaseCallBack())
                             .build();
                 }
             }
@@ -42,18 +42,26 @@ public abstract class ProductsRoomDB extends RoomDatabase {
         return INSTANCE;
     }
 
-//    @NonNull
-//    private static Callback getRoomDatabaseCallBack() {
-//        return roomDatabaseCallBack;
-//    }
-//
-//    //TODO: complete room db call back
-//    private static final RoomDatabase.Callback roomDatabaseCallBack = onCreate(db) -> {
-//        super.onCreate(db);
-//
-//        databaseWriteExecutor.execute();
-//    }
+    @NonNull
+    private static Callback getRoomDatabaseCallBack() {
+        return roomDatabaseCallBack;
+    }
 
+    private static final RoomDatabase.Callback roomDatabaseCallBack = new RoomDatabase.Callback() {
+
+        @Override
+        public void onCreate(@NonNull SupportSQLiteDatabase db) {
+            super.onCreate(db);
+
+            databaseWriteExecutor.execute(() -> {
+
+                ProductsDao productsDao = INSTANCE.productsDao();
+                productsDao.deleteAll();
+
+            });
+        }
+
+    };
 
 
 }
