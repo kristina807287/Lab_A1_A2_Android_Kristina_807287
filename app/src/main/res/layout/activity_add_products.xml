@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context=".AddProductsActivity">
 
     <LinearLayout
@@ -19,7 +20,7 @@
             android:id="@+id/tv_add_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add New Products"
+            android:text="Add New Product"
             android:textAlignment="center"
             android:textStyle="bold"
             android:textColor="@color/purple4"
@@ -63,7 +64,7 @@
             android:layout_marginTop="5dp"
             android:inputType="text"
             android:paddingHorizontal="5dp"
-            android:hint="Enter Product Description"
+            android:hint="Enter Product Description (i.e dining chair)"
             android:textSize="14sp" />
 
         <TextView
@@ -74,16 +75,17 @@
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:layout_marginTop="5dp"
-            android:textColor="@color/blue2"/>
+            android:textColor="@color/blue2"
+           />
 
         <EditText
             android:id="@+id/et_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:hint="Enter Product Price"
             android:inputType="number"
             android:paddingHorizontal="5dp"
-            android:hint="Enter Product Price"
             android:textSize="14sp" />
 
         <Button
@@ -91,9 +93,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="120dp"
-            android:text="Add Products"
-            android:backgroundTint="@color/purple4"/>
+            android:layout_marginLeft="115dp"
+            android:text="Add Product"
+            android:backgroundTint="@color/blue1"/>
 
 
 

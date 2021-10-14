@@ -14,41 +14,36 @@
         android:backgroundTint="@color/yellow4"
         app:tabGravity="fill"
         app:tabMode="fixed"
-
         app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
         app:tabTextColor="@color/purple1"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="16dp"/>
+        tools:layout_editor_absoluteY="16dp" />
 
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tab_layout"/>
+        android:layout_below="@+id/tab_layout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"  />
 
-
-
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        app:defaultQueryHint="search by product description" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_add_products"
+        android:id="@+id/fab_add_products"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/peach2"
+        android:clickable="true"
+        android:contentDescription="Add Products Button"
+        app:srcCompat="@android:drawable/ic_input_add"
 
 
-      />
-
+        />
 
 </RelativeLayout>

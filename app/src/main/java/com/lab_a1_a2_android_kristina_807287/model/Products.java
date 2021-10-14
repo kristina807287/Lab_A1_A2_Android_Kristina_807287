@@ -31,14 +31,13 @@ public class Products {
 
    // generate constructor
 
-
     public Products(@NonNull String productName, @NonNull String productDescription, double productPrice) {
         this.productName = productName;
         this.productDescription = productDescription;
         this.productPrice = productPrice;
     }
 
-    //generate getters
+    // getters
 
     public int getProductId() {
         return productId;
@@ -58,13 +57,16 @@ public class Products {
         return productPrice;
     }
 
-    // generate setters
+
+    //  setters
 
     public void setProductId(int productId) {
+
         this.productId = productId;
     }
 
     public void setProductName(@NonNull String productName) {
+
         this.productName = productName;
     }
 
@@ -73,6 +75,7 @@ public class Products {
     }
 
     public void setProductPrice(double productPrice) {
+
         this.productPrice = productPrice;
     }
 
